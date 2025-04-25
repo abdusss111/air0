@@ -1,0 +1,47 @@
+# === Global ignores ===
+.DS_Store
+*.swp
+*.bak
+*~
+*.log
+
+# === IDEs ===
+.idea/
+.vscode/
+
+# === Python backend (api/) ===
+api/__pycache__/
+api/.env
+api/.venv/
+api/env/
+api/venv/
+api/*.pyc
+api/*.pyo
+api/*.pyd
+api/.pytest_cache/
+api/.mypy_cache/
+api/.dmypy.json
+api/.pyre/
+api/instance/
+api/.coverage
+api/htmlcov/
+api/*.sqlite3
+
+# === Frontend (Next.js in front/arctic-breeze/) ===
+front/arctic-breeze/node_modules/
+front/arctic-breeze/.next/
+front/arctic-breeze/.env
+front/arctic-breeze/.env.local
+front/arctic-breeze/.env.development.local
+front/arctic-breeze/.env.test.local
+front/arctic-breeze/.env.production.local
+front/arctic-breeze/out/
+front/arctic-breeze/npm-debug.log*
+front/arctic-breeze/yarn-debug.log*
+front/arctic-breeze/yarn-error.log*
+front/arctic-breeze/pnpm-debug.log*
+
+# === Lockfiles (choose based on package manager) ===
+# If you're using pnpm (based on presence of pnpm-lock.yaml)
+front/arctic-breeze/package-lock.json
+/front/arctic-breeze/node_modules/
