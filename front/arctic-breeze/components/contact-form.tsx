@@ -6,7 +6,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin, MessageCircleMore, Send  } from "lucide-react"
+
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ export default function ContactForm() {
     setIsSubmitting(true)
   
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/send-message/", {
+      const response = await fetch("http://194.32.140.89:8000/api/send-message/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -149,16 +150,42 @@ export default function ContactForm() {
               <h3 className="text-2xl font-bold mb-6">Контактная информация</h3>
 
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <Phone className="w-6 h-6 mr-4 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Телефон</p>
-                    <p className="mt-1">+7 747 626 3554</p>
+              <div className="flex items-start">
+                    <Phone className="w-6 h-6 mr-4 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium"></p>
+                      <a href="tel:+77476263554" className="mt-1 hover:underline">
+                      Телефон                      
+                      </a>
+
+                    </div>
                   </div>
+
+
+                <div className="flex items-center">
+                  <MessageCircleMore className="w-6 h-6 mr-4" />
+                  <a
+                    href="https://wa.me/77476263554"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    WhatsApp
+                  </a>
                 </div>
 
-                
-
+                <div className="flex items-center">
+                  <Send className="w-6 h-6 mr-4" />
+                  <a
+                    href="https://t.me/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    Telegram
+                  </a>
+                </div>
+              
                 <div className="flex items-start">
                   <MapPin className="w-6 h-6 mr-4 flex-shrink-0" />
                   <div>
@@ -172,19 +199,14 @@ export default function ContactForm() {
                 <h4 className="text-lg font-medium mb-4">Часы работы</h4>
                 <ul className="space-y-2">
                   <li className="flex justify-between">
-                    <span>Понедельник - Пятница:</span>
-                    <span>8:00 - 18:00</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Суббота:</span>
-                    <span>9:00 - 16:00</span>
+                    <span>Понедельник - Суббота:</span>
+                    <span>9:00 - 18:00</span>
                   </li>
                   <li className="flex justify-between">
                     <span>Воскресенье:</span>
-                    <span>Закрыто</span>
+                    <span>10:00 - 16:00</span>
                   </li>
                 </ul>
-                <p className="mt-4 text-sm">Экстренное обслуживание доступно 24/7</p>
               </div>
             </div>
           </div>

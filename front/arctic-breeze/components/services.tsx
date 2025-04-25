@@ -3,25 +3,20 @@ import { Home, Building2, Clock, Wrench } from "lucide-react"
 
 const services = [
   {
-    title: "Установка в жилых помещениях",
+    title: "Установка кондиционеров в жилых помещениях Алматы",
     description:
       "Профессиональная установка систем кондиционирования для домов любого размера, обеспечивающая оптимальный комфорт и энергоэффективность.",
     icon: Home,
   },
   {
-    title: "Коммерческая установка",
+    title: "Коммерческая установка - B2B",
     description:
-      "Специализированные услуги по установке кондиционеров для офисов, торговых помещений и других коммерческих объектов с минимальными перебоями в работе вашего бизнеса.",
+      "Специализированные услуги по установке кондиционеров для офисов, торговых помещений и других коммерческих объектов с минимальными перебоями в работе вашего бизнеса. Установка промышленных кондиционеров.",
     icon: Building2,
   },
+  
   {
-    title: "Экстренные услуги",
-    description:
-      "Быстрое реагирование и установка, когда вам необходимы немедленные решения для охлаждения, доступны 24/7.",
-    icon: Clock,
-  },
-  {
-    title: "Обслуживание и ремонт",
+    title: "Обслуживание, ремонт и заправка кондиционеров",
     description:
       "Комплексные услуги по обслуживанию и ремонту для поддержания эффективной работы вашей системы кондиционирования и продления срока ее службы.",
     icon: Wrench,
@@ -41,11 +36,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="pb-2">
-                <div className="w-14 h-14 bg-sky-100 rounded-full flex items-center justify-center mb-4">
+                <div className="w-18 h-14 bg-sky-100 rounded-full flex items-center justify-center mb-4">
                   <service.icon className="w-7 h-7 text-sky-600" />
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-800">{service.title}</CardTitle>

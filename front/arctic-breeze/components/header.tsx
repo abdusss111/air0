@@ -40,7 +40,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold text-sky-600">Арктический Бриз</span>
+          <span className="text-2xl font-bold text-sky-600">RD Group</span>
         </Link>
 
         {/* Desktop Navigation */}

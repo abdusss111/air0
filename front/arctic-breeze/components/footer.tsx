@@ -7,29 +7,12 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Арктический Бриз</h3>
+            <h3 className="text-xl font-bold mb-4">RD Group</h3>
             <p className="text-gray-400 mb-4">
               Профессиональные услуги по установке кондиционеров для жилых и коммерческих объектов. Обслуживаем
               сообщество с качеством и надежностью более 8 лет.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="w-5 h-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-            </div>
+          
           </div>
 
           <div>
@@ -98,23 +81,15 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">Контактная информация</h3>
             <address className="not-italic text-gray-400 space-y-2">
               <p>г. Алматы</p>
-              <p>Телефон: +7 747 626 3554</p>
+              <p className="hover:underline"><a href="tel:+77476263554">Телефон: +7 747 626 3554</a></p>
             </address>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Услуги по установке кондиционеров "Арктический Бриз". Все права защищены.
+            &copy; {new Date().getFullYear()} Услуги по установке кондиционеров "RD Group". Все права защищены.
           </p>
-          <div className="mt-2 space-x-4">
-            <Link href="#" className="hover:text-white transition-colors">
-              Политика конфиденциальности
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Условия использования
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -1,12 +1,7 @@
 import { Clock, Award, Zap, Shield } from "lucide-react"
 
 const benefits = [
-  {
-    title: "Доступность 24/7",
-    description:
-      "Мы доступны круглосуточно для решения ваших потребностей в установке кондиционеров, включая экстренные услуги.",
-    icon: Clock,
-  },
+  
   {
     title: "Сертифицированные специалисты",
     description:
@@ -39,7 +34,7 @@ export default function Benefits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
             <div
               key={index}
